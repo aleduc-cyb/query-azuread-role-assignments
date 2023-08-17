@@ -9,4 +9,8 @@ The following application permissions are needed:
 - GroupMember.Read.All
 - PrivilegedAccess.Read.AzureAD	
 - RoleManagement.Read.All
-- User.Read.All 
+- User.Read.All
+
+The code to use is in query_ad.py
+
+The other parts are to directly fill a QRadar reference set.
