@@ -10,9 +10,9 @@ config.read('config.ini')
 def get_auth_headers():
     try:
         # Get config data
-        client_id = config.get('PARAMS', 'client_id')
-        client_secret = config.get('PARAMS', 'client_secret')
-        tenant_id = config.get('PARAMS', 'tenant_id')
+        client_id = config.get('AZURE', 'client_id')
+        client_secret = config.get('AZURE', 'client_secret')
+        tenant_id = config.get('AZURE', 'tenant_id')
 
         # Configure query params
         token_url = f'https://login.microsoftonline.com/{tenant_id}/oauth2/token'
@@ -106,7 +106,7 @@ def get_eligible_users(role_definition_id):
     return eligible_members
 
 def main():
-    role_name = config.get('PARAMS', 'role_name')
+    role_name = config.get('AZURE', 'role_name')
     role_id, role_definition_id = get_role_ids(role_name)
     direct_users = get_direct_users(role_id)
     eligible_users = get_eligible_users(role_definition_id)

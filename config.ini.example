@@ -1,5 +1,11 @@
-[PARAMS]
+[AZURE]
 client_id = 
 client_secret = 
 tenant_id = 
 role_name = 
+
+[QRADAR]
+url = https://xxxx.fr
+api_key = 
+ref_set = 
+certificate =
